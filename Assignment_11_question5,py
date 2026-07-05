@@ -1,0 +1,26 @@
+def Palindrome(No):
+    temp = No
+    rev = 0
+
+    while No > 0:
+        digit = No % 10
+        rev = rev * 10 + digit
+        No = No // 10
+
+    if temp == rev:
+        return True
+    else:
+        return False
+
+def main():
+    value = int(input("Enter a number: "))
+
+    ret=Palindrome(value)
+
+    if ret :
+        print(value, "is a Palindrome Number")
+    else:
+        print(value, "is not a Palindrome Number")
+
+if __name__ == "__main__":
+    main()
